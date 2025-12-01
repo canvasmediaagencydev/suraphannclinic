@@ -51,14 +51,44 @@
 4. โหลดหน้าเว็บใหม่
 5. ตรวจสอบว่ามี request ไปที่ Google Analytics หรือไม่
 
-## 3. Google Tag Manager (Optional)
+## 3. Google Tag Manager
 
-หากต้องการใช้ Google Tag Manager เพื่อจัดการ tags ต่างๆ:
+Google Tag Manager ได้ถูกติดตั้งและกำหนดค่าเรียบร้อยแล้ว!
 
-1. ไปที่ [Google Tag Manager](https://tagmanager.google.com)
-2. สร้าง Account และ Container
-3. คัดลอก GTM Code
-4. แก้ไขไฟล์ `nuxt.config.js` เพื่อเพิ่ม GTM script
+**Container ID**: `GTM-N3PSJBKP`
+
+### สิ่งที่ได้ทำไปแล้ว:
+
+1. ✅ เพิ่ม GTM script ใน `nuxt.config.js`
+2. ✅ เพิ่ม GTM noscript iframe สำหรับผู้ใช้ที่ปิด JavaScript
+
+### การใช้งาน Google Tag Manager:
+
+1. เข้าไปที่ [Google Tag Manager](https://tagmanager.google.com)
+2. เลือก Container `GTM-N3PSJBKP`
+3. เพิ่ม Tags ต่างๆ ที่ต้องการ เช่น:
+   - Google Analytics 4
+   - Facebook Pixel
+   - Google Ads Conversion Tracking
+   - Hotjar
+   - หรือ tracking tools อื่นๆ
+
+### ข้อดีของการใช้ GTM:
+
+- จัดการ tracking codes ทั้งหมดในที่เดียว
+- ไม่ต้องแก้ไขโค้ดเว็บไซต์ทุกครั้งที่ต้องการเพิ่ม/ลบ tags
+- มี Preview Mode สำหรับทดสอบก่อน publish
+- Version control และ rollback ได้
+
+### การทดสอบ GTM:
+
+1. เปิดเว็บไซต์
+2. กด F12 เปิด Chrome DevTools
+3. ไปที่ Tab "Console"
+4. พิมพ์: `dataLayer`
+5. ควรเห็น Array ของ GTM events
+
+หรือใช้ [Google Tag Assistant](https://tagassistant.google.com/) extension
 
 ## 4. Structured Data (Schema.org)
 
